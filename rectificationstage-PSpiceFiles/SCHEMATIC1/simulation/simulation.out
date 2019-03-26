@@ -1,0 +1,298 @@
+
+**** 03/21/19 22:01:03 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-simulation"  [ C:\Users\Gustavo\Dropbox\UFMG\6 Periodo\Lab ELT1\Projetos\rectificationstage-pspicefiles\sche
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "simulation.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../rectificationstage-PSpiceFiles/RECTIFICATIONSTAGE.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Gustavo\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 100ms 0 10u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source RECTIFICATIONSTAGE
+X_U1         N02955 N02810 N02722 N02734 N02817 TL071/301/TI
+R_R1         N02810 N02817  50k TC=0,0 
+R_R2         0 N02810  50k TC=0,0 
+R_R3         N02817 N02955  1k TC=0,0 
+X_D2         0 N02955 awbbzx55c5v1 PARAMS:               
+X_D1         N07620 N07666 awb1n5406 PARAMS:                
+X_D4         N07626 N07620 awb1n5406 PARAMS:                
+V_V5         0 N07856  AC 0
++SIN 0 26.4 60 0 0 0
+V_V4         N07620 0  AC 0
++SIN 0 26.4 60 0 0 0
+C_C4         0 N07626  2200u  TC=0,0 
+X_D3         N07626 N07856 awb1n5406 PARAMS:                
+X_D5         N07856 N07666 awb1n5406 PARAMS:                
+C_C1         0 N07666  2200u  TC=0,0 
+C_C2         0 N07666  2200u  TC=0,0 
+C_C3         0 N07626  2200u  TC=0,0 
+X_U2         N09679 N09810 N07666 N10874 N09469 TL071/301/TI
+X_Q1         N07666 N09524 N09741 TIP122
+R_R4         N09524 N09469  100 TC=0,0 
+V_V6         N09679 0 5
+R_R5         N09741 N09810  100k TC=0,0 
+R_R6         N09810 0  50k TC=0,0 
+R_Rload         0 N09741  10 TC=0,0 
+V_V7         0 N10874 5
+R_R7         N10930 N10936  100 TC=0,0 
+R_R8         N10968 N10962  100k TC=0,0 
+X_U3         N10874 N10962 N09679 N07626 N10936 TL071/301/TI
+R_R9         N10962 0  50k TC=0,0 
+R_Rload1         0 N10968  10 TC=0,0 
+X_Q2         N07626 N10930 N10968 TIP127
+
+**** RESUMING simulation.cir ****
+.END
+
+**** 03/21/19 22:01:03 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-simulation"  [ C:\Users\Gustavo\Dropbox\UFMG\6 Periodo\Lab ELT1\Projetos\rectificationstage-pspicefiles\sche
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.DX         X_D1.model22    X_D4.model22    X_D3.model22    
+          IS  800.000000E-18  543.300000E-12  543.300000E-12  543.300000E-12 
+           N                    1.516           1.516           1.516        
+          BV                  700             700             700            
+         IBV                    1               1               1            
+          RS                    8.779000E-03    8.779000E-03    8.779000E-03 
+          TT                  100.000000E-12  100.000000E-12  100.000000E-12 
+         CJO                  150.000000E-12  150.000000E-12  150.000000E-12 
+          VJ                     .75             .75             .75         
+          EG                    1.11            1.11            1.11         
+
+
+               X_D5.model22    X_U2.DX         X_Q1.Dmodel     X_U3.DX         
+          IS  543.300000E-12  800.000000E-18    2.134100E-12  800.000000E-18 
+           N    1.516                           3.4748                       
+         ISR                                  100.000000E-12                 
+          BV  700                             120                            
+         IBV    1                               1.000000E-06                 
+          RS    8.779000E-03                    1.000000E-03                 
+          TT  100.000000E-12                    5.000000E-09                 
+         CJO  150.000000E-12                    1.000000E-12                 
+          VJ     .75                             .75                         
+           M                                     .3333                       
+          EG    1.11                                                         
+
+
+               X_Q2.Dmodel     
+          IS   10.000000E-15 
+          RS    1.000000E-03 
+         CJO   10.000000E-21 
+
+
+**** 03/21/19 22:01:03 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-simulation"  [ C:\Users\Gustavo\Dropbox\UFMG\6 Periodo\Lab ELT1\Projetos\rectificationstage-pspicefiles\sche
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_Q1.Q1model    X_Q1.Q2model    X_Q2.Q1model    X_Q2.Q2model    
+               NPN             NPN             PNP             PNP             
+       LEVEL    1               1               1               1            
+          IS  209.200000E-15  209.200000E-15   57.280000E-15   57.280000E-15 
+          BF    2.997000E+03    2.997000E+03    2.997000E+03    2.997000E+03 
+          NF    1               1               1               1            
+         VAF  100             100             100             100            
+         IKF     .07177          .07177         1.511           1.511        
+         ISE    4.744000E-12    4.744000E-12    1.049000E-12    1.049000E-12 
+          NE    1.447           1.447           1.386           1.386        
+          BR   36.63           36.63             .1021           .1021       
+          NR    1               1               1               1            
+         VAR  100             100             100             100            
+         IKR     .4299           .4299          4.319           4.319        
+         ISC    1.630000E-12    1.630000E-12    9.571000E-12    9.571000E-12 
+          NC    1.002           1.002           1.517           1.517        
+          NK     .5871           .5871           .7332           .7332       
+         ISS    0               0               0               0            
+          RB   27.3662         27.3662          1.347           1.347        
+          RE    0               0               0               0            
+          RC    3.26784         3.26784          .1061           .1061       
+         CJE  111.800000E-12  111.800000E-12  145.600000E-12  145.600000E-12 
+         VJE     .5941           .5941           .9672           .9672       
+         MJE     .4082           .4082           .4056           .4056       
+         CJC  160.100000E-12    0             232.700000E-12    0            
+         VJC     .5399           .5399          1.5             1.5          
+         MJC     .1963           .1963           .244            .244        
+        XCJC     .9              .9              .9              .9          
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          TF   18.000000E-09   18.000000E-09    2.100000E-09    2.100000E-09 
+         XTF    1               1              10              10            
+         VTF   10              10              10              10            
+         ITF     .01             .01            1               1            
+          TR   12.000000E-06   12.000000E-06   14.000000E-06   14.000000E-06 
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.42            2.42            2.2             2.2          
+           D     .87             .87             .52             .52         
+
+
+**** 03/21/19 22:01:03 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-simulation"  [ C:\Users\Gustavo\Dropbox\UFMG\6 Periodo\Lab ELT1\Projetos\rectificationstage-pspicefiles\sche
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.JX         X_U2.JX         X_U3.JX         
+               PJF             PJF             PJF             
+         VTO   -1              -1              -1            
+        BETA  270.100000E-06  270.100000E-06  270.100000E-06 
+          IS   15.000000E-12   15.000000E-12   15.000000E-12 
+
+
+**** 03/21/19 22:01:03 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-simulation"  [ C:\Users\Gustavo\Dropbox\UFMG\6 Periodo\Lab ELT1\Projetos\rectificationstage-pspicefiles\sche
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N02722)    6.9106 (N02734)    3.9738 (N02810)    4.0731 (N02817)    5.4427     
+
+(N02955)    5.0602 (N07620)    0.0000 (N07626)     .5082 (N07666)    -.5508     
+
+(N07856)    0.0000 (N09469)   -2.0746 (N09524)   -2.0504 (N09679)    5.0000     
+
+(N09741)    -.0096 (N09810)    -.0032 (N10874)   -5.0000 (N10930)    3.4769     
+
+(N10936)    3.5244 (N10962)     .0017 (N10968)     .0050 (X_Q1.4)    -.1145     
+
+(X_Q2.4)     .0639 (X_U1.6)   -5.6327 (X_U1.7)    5.5121 (X_U1.8)    5.5121     
+
+(X_U1.9)    0.0000 (X_U2.6)  -19.2420 (X_U2.7)   -2.0836 (X_U2.8)   -2.0836     
+
+(X_U2.9)    0.0000 (X_U3.6) -123.4300 (X_U3.7)    3.7700 (X_U3.8)    3.7700     
+
+(X_U3.9)    0.0000 (X_U1.10)    4.4635                   (X_U1.11)    4.3242    
+
+(X_U1.12)    4.1251                   (X_U1.53)    4.7106                       
+
+(X_U1.54)    6.1738                   (X_U1.90)     .4629                       
+
+(X_U1.91)   25.0000                   (X_U1.92)  -25.0000                       
+
+(X_U1.99)    5.4422                   (X_U2.10)    -.1591                       
+
+(X_U2.11)   -4.3195                   (X_U2.12)   -5.0000                       
+
+(X_U2.53)   -2.7508                   (X_U2.54)   -2.8000                       
+
+(X_U2.90)    -.0605                   (X_U2.91)   25.0000                       
+
+(X_U2.92)  -25.0000                   (X_U2.99)   -2.7754                       
+
+(X_U3.10)   -4.5567                   (X_U3.11)    -.1612                       
+
+(X_U3.12)   -4.5254                   (X_U3.53)    2.8000                       
+
+(X_U3.54)    2.7082                   (X_U3.90)    1.6379                       
+
+(X_U3.91)   25.0000                   (X_U3.92)  -25.0000                       
+
+(X_U3.99)    2.7541                   (X_D2.xinstbzx55c5v1.1)     .4354         
+
+(X_D2.xinstbzx55c5v1.3)    4.6248     (X_D2.xinstbzx55c5v1.9) 10.28E-06     
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V5         4.549E-04
+    V_V4        -4.549E-04
+    V_V6        -1.127E-03
+    V_V7        -4.084E-03
+    X_U1.VB     -5.633E-05
+    X_U1.VC     -1.565E-03
+    X_U1.VE     -1.512E-03
+    X_U1.VLIM    4.629E-04
+    X_U1.VLP    -2.454E-11
+    X_U1.VLN    -2.546E-11
+    X_U2.VB     -1.924E-04
+    X_U2.VC     -1.815E-04
+    X_U2.VE      7.262E-13
+    X_U2.VLIM   -6.052E-05
+    X_U2.VLP    -2.506E-11
+    X_U2.VLN    -2.494E-11
+    X_U3.VB     -1.234E-03
+    X_U3.VC     -1.164E-03
+    X_U3.VE      8.170E-13
+    X_U3.VLIM    1.638E-03
+    X_U3.VLP    -2.336E-11
+    X_U3.VLN    -2.664E-11
+
+    TOTAL POWER DISSIPATION   3.58E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/21/19 22:01:03 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-simulation"  [ C:\Users\Gustavo\Dropbox\UFMG\6 Periodo\Lab ELT1\Projetos\rectificationstage-pspicefiles\sche
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        1.42
+
