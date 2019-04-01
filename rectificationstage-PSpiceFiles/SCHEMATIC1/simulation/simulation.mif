@@ -1,6 +1,0 @@
- lib=C:\Cadence\SPB_17.2\tools\PSpice\Library\tex_inst.lib, offset=83782, size=1158
- lib=C:\Cadence\SPB_17.2\tools\PSpice\Library\diz.lib, offset=225961, size=682
- lib=C:\Cadence\SPB_17.2\tools\PSpice\Library\di.lib, offset=84524, size=733
- lib=C:\Cadence\SPB_17.2\tools\PSpice\Library\darlngtn.lib, offset=80068, size=1389
- lib=C:\Cadence\SPB_17.2\tools\PSpice\Library\darlngtn.lib, offset=81458, size=1071
- lib=C:\Cadence\SPB_17.2\tools\PSpice\Library\templates.lib, offset=13466, size=8781
